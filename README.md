@@ -1,2 +1,2 @@
 # derdimiseveyim
-source code of derdimiseveyim.coma
+source code of derdimiseveyim.com
