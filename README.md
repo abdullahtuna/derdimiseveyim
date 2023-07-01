@@ -1,2 +1,2 @@
 # derdimiseveyim
-source code of derdimiseveyim.com güncelleme yaptım
+source code of derdimiseveyim.com
