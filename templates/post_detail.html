@@ -12,6 +12,12 @@
         <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
         <p class="card-text ">{{ object.content | safe }}</p>
       </div>
+      {% if post.author == request.user %}
+        <div class="mt-4 mx-3">
+        <a class="btn btn-primary" href="{% url 'post_update' post.id %}">Düzenle</a>
+        <a class="btn btn-danger" href="{% url 'post_delete' post.id %}">Sil</a>
+        </div>
+      {% endif %}
     </div>
     {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
   </div>
