@@ -1,13 +1,7 @@
-from django.shortcuts import render, redirect
 from django.views import generic
 from .models import Post, Comment
-from .forms import CommentForm
-from django.http.response import HttpResponse
-from django.contrib.auth import login
-from django.contrib import messages
-from django.shortcuts import render, redirect
-from .forms import PostForm
-from django.contrib.auth.decorators import login_required
+from .forms import CommentForm, ContactForm
+from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.utils.text import slugify
@@ -17,7 +11,14 @@ from django.contrib import messages
 def about(request):
     return render(request, 'about.html')
 def iletisim(request):
-    return render(request, 'iletisim.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'success_iletisim.html')
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'iletisim.html', context)
 def kurallar(request):
     return render(request, 'kurallar.html')
 
@@ -38,8 +39,7 @@ class PostCreate(LoginRequiredMixin, generic.CreateView):
     template_name = 'post_form.html'
 
     def get_success_url(self):
-        messages.success(
-            self.request, 'Derdiniz Başarıyla Sevildi.')
+        messages.success(self.request, 'Derdiniz onay için Yöneticilerimize gönderildi.')
         return reverse_lazy('home')
 
     def form_valid(self, form):
@@ -63,8 +63,7 @@ class PostUpdate(LoginRequiredMixin, generic.UpdateView):
         return context
 
     def get_success_url(self):
-        messages.success(
-            self.request, 'Derdiniz Başarıyla Tekrar Sevildi.')
+        messages.success(self.request, 'Derdiniz Başarıyla Düzenlendi.')
         return reverse_lazy('home')
 
     def get_queryset(self):
@@ -76,8 +75,7 @@ class PostDelete(LoginRequiredMixin, generic.DeleteView):
     template_name = 'post_confirm_delete.html'
 
     def get_success_url(self):
-        messages.success(
-            self.request, 'Derdiniz Çöpe Gitti.')
+        messages.success(self.request, 'Derdiniz Çöpe Gitti.')
         return reverse_lazy('home')
 
     def get_queryset(self):

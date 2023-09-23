@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Contact
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'status','created_on')
@@ -8,5 +8,6 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Contact)
 
 # Register your models here.

@@ -6,5 +6,27 @@
 </head>
 <body>
 {% extends "base.html" %}
+
+{% block content %}
+<style>
+input[type=text], input[type=email], textarea {
+ width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+}
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2"><br />
+<form action="" method="post">
+   {% csrf_token %}
+   {{ form }}
+   <input type="submit" value="Gönder">
+</form>
+    </div>
+  </div>
+</div>
+{% endblock %}
 </body>
 </html>

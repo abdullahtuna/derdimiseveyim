@@ -35,4 +35,10 @@ class Comment(models.Model):
     def __str__(self):
         return 'Comment by {}'.format(self.name)
 
-# Create your models here.
+class Contact(models.Model):
+    email = models.EmailField()
+    konu = models.CharField(max_length=255)
+    mesaj = models.TextField()
+
+    def __str__(self):
+        return self.email
