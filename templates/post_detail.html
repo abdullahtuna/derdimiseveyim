@@ -46,6 +46,7 @@
   {% endif %}
 
   <!-- Yorum yapma formu -->
+      {% if user.is_authenticated %}
   <div class="row mt-5">
     <div class="col-lg-6 offset-lg-3">
       <h3>Yorum Yap:</h3>
@@ -63,6 +64,7 @@
 </div>
 </div>
 </div>
+{% endif %}
 {% endblock content %}
 
 </body>
