@@ -115,7 +115,6 @@ class PostView(generic.DetailView):
         context['form'] = form
 
         if form.is_valid():
-        #name = form.cleaned_data['name']
             name = self.request.user
             content = form.cleaned_data['content']
 

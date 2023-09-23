@@ -6,5 +6,48 @@
 </head>
 <body>
 {% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h1>{% block title %} Kurallar {% endblock title %}</h1>
+        <p class="card-text ">Tehdit edici, küfürlü, müstehcen, kaba, nefret dolu yada aşırı sayıda istenmeyen mesajlar göndermek; din, dil, ırk ayrımına yönelik iletiler göndermek ve materyaller kullanmak kesinlikle yasaktır.
+Yazdığınız her türlü mesajdan yalnızca siz sorumlu sayılırsınız. Site Yöneticileri bu konuda hiçbir sorumluluk üstlenmez. Site kurallarına uymayan mesajlar hiçbir ayrım gözetmeksizin silinir.
+Siteye mesaj yazarken lütfen site kuralları dahilinde mesajlar yazmaya çalışın aksi takdirde mesajlarınız hiçbir uyarıda bulunulmadan silinir.
+Daha fazla bilgi için Site Yöneticileri ile irtibata geçin.<br />
+<br />1)Sitede kişi veya firmaların onurlarını zedeleyecek hakaret, küfür vs. içeren mesajları yazmak kesinlikle yasaktır.<br />
+<br />2)Sitedeki bir kullanıcıyı bir konuda bilgisi olmadığı veya az bilgisi olduğu için veya bir konuda hatalı bilgi verdiği için suçlayıp hakaret edemezsiniz. Böyle durumlarda lütfen olaya kibarca yaklaşın.<br />
+<br />3)Sitede cevabı önceden verilmiş soruları site içerisinde aramadan gereksiz mesajlar yazıp sitede gereksiz bir karmaşa yaratanlar önce uyarılıp ardından gerek görülürse siteden uzaklaştırılacaktır.<br />
+<br />4)Site Yönetimi , aynı kişinin birden fazla rumuz veya isimle, farklı kişilermiş gibi aynı konuda görüş belirttiğini tespit etmesi durumunda, gerekirse kişinin tüm mesajlarını siler ve site'a girişini yasaklar.Yine buna bağlı olarak aynı kişinin birden fazla e-posta adresi ile başvurarak farklı isimler ile yazdığının tespit edilmesi durumunda site ile ilişkisi kesilir.Kullanıcılar kendi kullanıcı adı ve şifrelerini korumakla sorumludurlar,başkası kullanır ve kural dışı yazı olursa BAN edilirler.<br />
+<br />5)Sitede dil, din, ırk ve siyaset hakkında tartışma yapmak kesinlikle yasaktır, siyasi yazılarınızı siyasi içerikli siteye üye olarak o sitede dile getirebilirsiniz, siteyi siyasi propaganda için kullananların üyelikleri iptal edilir.<br />
+<br />6)Mesaj yazarken büyük harf kullanmak bağırmak anlamına geleceği için kesinlikle büyük harf kullanarak yazı yazmayınız. Konu başlıklarını konunun içeriğini ifade eden şekilde seçmeniz gerekiyor. "Yardım", "lütfen", "acil", "kişiye özel" gibi başlıklar derhal silinecektir.<br />
+<br />7)Site bilgi paylaşım merkezi olduğu için gereksiz-kişisel tartışmalara-atışmalara girmek yasaktır. Site bir birinize meydan okuyacak bir yer değildir.<br />
+<br />8)Başkasına ait kişisel bilgiler yayınlamak yasaktır. (telefon numarası, e-posta adresi v.b.)<br />
+<br />9)Site görevlileri sitedeki yetkili kişilerdir. Site görevlilerine hakaret, küfür vs. kesinlikle yasaktır.<br />
+<br />10)Yöneticiler her yazılan mesajı kontrol edemeyebilirler. Yöneticilerden önce uygunsuz bir mesajla karşılaştığınızda lütfen o bölümden sorumlu yöneticilere bildiriniz.<br />
+<br />11)Yöneticiler siteden sorumlu kişilerdir. Gereksiz tartışmalara girmek yasaktır. Sitede yöneticilere dolaylı yoldan sataşmak, üyelik iptalinize neden olabilir. Sorunlarınızı yöneticilerin özeline mesaj atarak çözünüz.<br />
+<br />12)Sitede üyeler arasında yapılan link ve program paylaşımında, bilgisayarınızda oluşabilecek problemlerden kullanıcılar sorumludur. Bu yolla program indiren kullanıcılar bir virüs tarama programını muhakkak kullanmalıdırlar. Aksi halde site yönetimi sorumluluk kabul etmez.<br />
+<br />13)Kategorilerde açtığınız konularda, daha sonraki günlerde de ekleme yaparsanız, aynı konuyu kullanırsanız, site kirliliğini önlemiş oluruz. Buna benzer olaylarda bu kurala uyulmaz ise yöneticiler siteyi temizleme yetkisine sahiplerdir.<br />
+<br />14)Siteye konunuzu yazdıktan sonra, lütfen derdi yukarılarda tutmak için konu ile alakasız yazılarla eklemeler yapmayınız. Bu tip eylemlerde, dert uyarı yapılmadan silinecektir. İlk mesajınızı dikkatli yazınız, ekleme yapmak isterseniz "düzenle" ile yazınızı düzeltebilirsiniz.<br />
+<br />15)Bu sitede bulunarak tüm site kurallarını kabul etmiş sayılırsınız. Site kuralları haber vermeksizin değiştirilebilir.<br />
+<br />16) Sitede yazilan mesajlardan tamamen yazan site üyesi sorumludur. Şahısların yazdıkları yazılardan dolayı sitemiz hiçbir sorumluluk kabul etmez.<br />
+<br />17) T.C. yasalarını ya da uluslararasi kanunları, anlaşmaları, tüzükleri çigneyen mesajlar sitede gönderilemez.<br />
+<br />18) Topluluklar hakkında tahrik edici ve küçük düşürücü yazılar yazılamaz. (Örneğin: Türk, Kürt, Ermeni, Yahudi, Çerkez, Zenci, Hint, Arap, Çingene, Roman, Rus, Göçmen gibi.)<br />
+<br />19) Tehdit edici, küfürlü, örf ve adetlere karşı, nefret dolu ya da çok miktarlarda istenmeyen mesajlar göndermek; din, dil, irk ayrımına yönelik iletiler göndermek ve materyaller kullanmak; site yöneticilerini ve kullanıcılarını küçümser davranışlar sergilemek yasaktır.<br />
+<br />20) Yorum amacı taşımayan salt propaganda içerikli parti ve siyaset yazıları yasaktır.<br />
+<br />21) Her türlü taciz edici yazı yasaktır.<br />
+<br />22) Sitede, sitenizin ziyaret edilmesini istemeniz, sitenizde satılan veya aracı olunulan bir "ürünün" reklamını yapmanız ve bunlar dışındaki tüm ticari kaygı güden mesajlar ve crack, warez, hack appz ve benzeri sitelerin tanitimi yasaktır.<br />
+<br />23) Site admin ve yöneticileri kurallara uymayan mesajlari değiştirme ve silme hakkına sahiptir.<br />
+<br />24) Site kurallarina uymayan üyeler yöneticiler tarafindan uyarılır, davranışın tekrarında sistemimizden kayıtları silinir.<br />
+<br />25) Site kurallarının güncellenme veya yenilerinin eklenmesi hakkı site yöneticilerince her zaman saklıdır.<br />
+<br />26) Her türlü telif hakkı içeren paylaşım yasaktır. Crack, warez, mp3 vs...<br />
+<br />27) Siteye üye olan herkes bu şartları kabul etmis sayılır.
+            </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
 </body>
 </html>
