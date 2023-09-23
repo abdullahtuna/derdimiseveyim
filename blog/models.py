@@ -24,8 +24,7 @@ class Post(models.Model):
         return self.title
 
 class Comment(models.Model):
-    name = models.CharField(max_length=50)
-    email = models.EmailField(max_length=100)
+    name = models.CharField(max_length=50, default="Anonymous")
     content = models.TextField()
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)

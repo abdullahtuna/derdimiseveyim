@@ -115,16 +115,17 @@ class PostView(generic.DetailView):
         context['form'] = form
 
         if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
+        #name = form.cleaned_data['name']
+            name = self.request.user
             content = form.cleaned_data['content']
 
             comment = Comment.objects.create(
-                name=name, email=email, content=content, post=post
+                name=name, content=content, post=post
             )
 
             form = CommentForm()
             context['form'] = form
             return self.render_to_response(context=context)
+
 
         return self.render_to_response(context=context)
