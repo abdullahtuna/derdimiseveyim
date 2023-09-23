@@ -3,7 +3,6 @@ from django.views import generic
 from .models import Post, Comment
 from .forms import CommentForm
 from django.http.response import HttpResponse
-from derdimiseveyim.forms import NewUserForm
 from django.contrib.auth import login
 from django.contrib import messages
 from django.shortcuts import render, redirect
