@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Onay</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block head_title %}Dert Sil{% endblock head_title %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h2 class=" my-5">Dert Sil</h2>
+      <form method="POST">
+        {% csrf_token %}
+        <p>Silmek istediğinize emin misiniz?</p>
+        <button type="submit" class="btn btn-danger">Evet Eminim!
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+</body>
+</html>

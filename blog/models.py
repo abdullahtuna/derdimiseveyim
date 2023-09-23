@@ -23,4 +23,22 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-# Create your models here.
+class Comment(models.Model):
+    name = models.CharField(max_length=50, default="Anonymous")
+    content = models.TextField()
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ('-created',)
+
+    def __str__(self):
+        return 'Comment by {}'.format(self.name)
+
+class Contact(models.Model):
+    email = models.EmailField()
+    konu = models.CharField(max_length=255)
+    mesaj = models.TextField()
+
+    def __str__(self):
+        return self.email

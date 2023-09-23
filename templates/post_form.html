@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeni Dert Girişi</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block head_title %}{% if update %}Dert Güncelle{% else %}Yeni Dert Gir{% endif %}{% endblock head_title %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h2 class=" my-5">{% if update %}Dert Güncelle{% else %}Yeni Dert Gir{% endif %}</h2>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="id_title">Başlık:</label>
+          <input type="text" class="form-control {% if form.title.errors %}is-invalid{% endif %}" id="id_title"
+            name="title" value='{{ form.title.value|default:"" }}'>
+          {% if form.title.errors %}
+          <div class="invalid-feedback">{{ form.title.errors }}</div>
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          <label for="id_content">İçerik:</label>
+          <textarea type="text" class="form-control {% if form.content.errors %}is-invalid{% endif %}" id="id_content"
+            name="content" cols="40" rows="10">{{ form.content.value|default:"" }}</textarea>
+          {% if form.content.errors %}
+          <div class="invalid-feedback">{{ form.content.errors }}</div>
+          {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          {% if update %}Dert Güncelle{% else %}Derdimi Sev!{% endif %}
+        </button>
+      </form>
+
+    </div>
+  </div>
+</div>
+{% endblock content %}
+</body>
+</html>

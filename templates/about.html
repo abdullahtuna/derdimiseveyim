@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hakkımızda</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h1>{% block title %} Hakkımızda {% endblock title %}</h1>
+        <p class="card-text ">Biz Orta Doğu Teknik Üniversitesinin Bilgi Teknolojileri Sertifika Programında bir araya gelmiş dört arkadaşız ve bu site de bizim bitirme projemiz. :)<br />
+
+<br />derdimiseveyim.com, insanların dertlerini paylaşabilecekleri, anlayışlı bir toplulukla bir araya geldikleri bir platformdur. Biz, kullanıcıların yaşadıkları sorunları, endişeleri ve zorlukları paylaşmalarını teşvik ediyoruz ve bu dertlerin başkaları tarafından duyulmasını sağlıyoruz. Burada, empati ve destek dolu bir ortamda, insanlar birbirlerine tavsiye vererek, içsel huzur ve çözümler arayışında birlikte yürüyorlar. Derdinizi paylaşın ve bu paylaşımcı topluluğun bir parçası olun.
+                 </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+</body>
+</html>
